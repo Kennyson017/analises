@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #D1E9FF;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    width: 100%;
+}
+
+.content /* Estilo padrão de conteudo dentro de todas as seções */{
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4em;
+    padding: 2.5em 0em 5em 0em;
+}
+
+img{
+    width: 50%;
+    max-width: 15em;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #004F99;
+    margin: 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #003566;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    max-width: 856px;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 856px;
+}
+
+.video{
+    position: relative;
+    width: 100%; /* Responsivo, ajusta a largura ao contêiner pai */
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0; /* Altura é derivada do padding */
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 hsla(0, 0%, 0%, 0.25);
+}
+
+
+/* Botão da https://vultr.com/ */
+
+/* Estilo do botão */
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0160b9;
+    border-radius: .5em;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    border: none;
+    box-shadow: 0 10px 10px 0 hsla(0, 0%, 0%, 0.25);
+}
+
+/* Efeito de hover */
+.btn .btn-hover-effect {
+    z-index: 5;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle closest-side, #0e8aff, transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+/* Estilo do texto e ícone do botão */
+.btn .btn__icon,
+.btn .btn__text {
+    z-index: 10;
+    position: relative;
+    pointer-events: none;
+}
+
+.btn:hover {
+    scale: 1.1;
+    transition: ease-in-out .2s;
+}
+
+/* Efeito de hover ao passar o mouse */
+.btn:hover .btn-hover-effect {
+    width: 300px;
+    height: 300px;
+}
+
+/* Efeito de hover ao clicar */
+.btn:active .btn-hover-effect {
+    width: 600px;
+    height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.85em;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
+}
+
